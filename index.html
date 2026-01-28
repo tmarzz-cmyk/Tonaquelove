@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tonaquelove — Honest love. Stronger together.</title>
+  <meta name="description" content="Tonaquelove offers practical couples coaching, a healing journal, and daily affirmations — coaching tools to strengthen relationships (not therapy).">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    /* Inlined styles for single-file deployment (Tonaquelove) */
+    :root{
+      --bg: #fff7f2;
+      --muted: #666;
+      --text: #222;
+      --accent: #C77B63;
+      --card: #fff;
+      --max-width: 1100px;
+      --radius: 10px;
+      --gap: 1.25rem;
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      color:var(--text);
+      background:linear-gradient(180deg,var(--bg),#fff);
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      line-height:1.5;
+      font-size:16px;
+    }
+    .container{width:92%;max-width:var(--max-width);margin:0 auto;padding:2.2rem 0}
+    .header-inner, .footer-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem}
+    .grid-2{display:grid;grid-template-columns:1fr 360px;gap:var(--gap)}
+    .grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:var(--gap)}
+    .skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
+    .skip-link:focus{position:static;width:auto;height:auto;padding:.75rem .5rem;background:#111;color:#fff;border-radius:6px}
+    .site-header{background:transparent;position:sticky;top:0;z-index:40;backdrop-filter: blur(6px);padding:.75rem 0}
+    .logo{font-family:"Montserrat", "Helvetica Neue", Arial;font-weight:700;font-size:1.15rem;color:var(--text);text-decoration:none}
+    .main-nav ul, .mobile-menu ul {list-style:none;margin:0;padding:0;display:flex;gap:1rem;align-items:center}
+    .main-nav a{color:var(--text);text-decoration:none;padding:.35rem .4rem;border-radius:6px}
+    .main-nav a:hover{background:rgba(0,0,0,0.03)}
+    .menu-toggle{display:none;background:none;border:0;font-size:1.25rem;padding:.5rem;cursor:pointer}
+    .hero{padding:3.5rem 0;background:linear-gradient(180deg, rgba(199,123,99,0.08), transparent);}
+    .hero-inner{text-align:center;max-width:920px;margin:0 auto}
+    .hero h1{margin:0;font-size:1.9rem}
+    .lead{font-size:1.05rem;color:var(--muted);margin-top:.5rem}
+    .hero-ctas{margin-top:1.1rem;display:flex;gap:.75rem;justify-content:center;flex-wrap:wrap}
+    .btn{display:inline-block;padding:.6rem 1rem;border-radius:8px;background:transparent;border:2px solid transparent;color:var(--text);text-decoration:none;cursor:pointer}
+    .btn.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+    .small-note{color:var(--muted);font-size:.9rem;margin-top:.5rem}
+    .section{padding-top:2rem;padding-bottom:2rem}
+    .about-photo img{width:100%;border-radius:12px;display:block}
+    .about-photo figcaption{font-size:.85rem;color:var(--muted);margin-top:.4rem}
+    .values{padding-left:1rem}
+    .card{background:var(--card);border-radius:10px;padding:1rem;box-shadow:0 6px 18px rgba(20,20,20,0.04)}
+    .card h3{margin-top:0}
+    .price{font-weight:700;color:var(--accent)}
+    .disclaimer{margin-top:1rem;padding:.75rem;border-left:4px solid var(--accent);background:rgba(199,123,99,0.04);border-radius:6px;color:var(--muted)}
+    .quote-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:1rem}
+    .quote-card{padding:1.25rem;background:#fff;border-radius:10px;box-shadow:0 6px 20px rgba(25,25,25,0.03);font-style:italic;color:var(--text)}
+    .preview-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:.6rem;margin-top:1rem}
+    .preview-item{display:block;position:relative;border-radius:10px;overflow:hidden;text-decoration:none;color:inherit}
+    .preview-item img{width:100%;height:160px;object-fit:cover;display:block;filter:brightness(.95)}
+    .preview-item span{position:absolute;left:0;bottom:0;padding:.5rem 1rem;background:linear-gradient(180deg, transparent, rgba(0,0,0,.35));color:#fff;font-weight:600}
+    .contact-form{max-width:760px;display:grid;gap:.8rem}
+    .contact-form label{display:block;font-size:.95rem;color:var(--muted)}
+    .contact-form input[type="text"], .contact-form input[type="email"], .contact-form textarea{width:100%;padding:.6rem;border-radius:8px;border:1px solid #e6e6e6}
+    .checkbox{display:flex;gap:.5rem;align-items:center}
+    .site-footer{background:#fff;padding:1.5rem 0;border-top:1px solid #f0e6e2}
+    .site-footer nav ul{display:flex;gap:.5rem;flex-wrap:wrap}
+    .legal{font-size:.9rem;color:var(--muted)}
+    /* Gallery */
+    .masonry-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.75rem}
+    .masonry-item{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 6px 18px rgba(20,20,20,0.04)}
+    .masonry-item img{width:100%;height:240px;object-fit:cover;display:block;cursor:pointer}
+    .masonry-item figcaption{padding:.6rem;font-size:.9rem;color:var(--muted)}
+    .filters{display:flex;gap:.5rem;margin-top:.75rem}
+    .filter-btn{padding:.4rem .6rem;border-radius:8px;border:1px solid #eee;background:#fff;cursor:pointer}
+    .filter-btn.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+    .lightbox{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.75);z-index:1000;visibility:hidden;opacity:0;transition:opacity .18s ease;backdrop-filter:blur(6px)}
+    .lightbox[aria-hidden="false"]{visibility:visible;opacity:1}
+    .lb-content{max-width:90%;max-height:85%;outline:0}
+    .lb-content img{max-width:100%;max-height:70vh;border-radius:8px;display:block;margin:0 auto}
+    .lb-close, .lb-prev, .lb-next{position:absolute;background:transparent;color:#fff;border:0;font-size:2rem;cursor:pointer;padding:.5rem}
+    .lb-close{top:1rem;right:1rem}
+    .lb-prev{left:1rem}
+    .lb-next{right:1rem}
+    @media (max-width:880px){
+      .grid-2{grid-template-columns:1fr}
+      .menu-toggle{display:inline-block}
+      .main-nav{display:none}
+      .mobile-menu{background:#fff;padding:1rem;border-top:1px solid #eee}
+      .hero-inner{padding:1rem}
+      .masonry-item img{height:200px}
+      .about-photo{order:-1}
+    }
+    /* subtle focus styles */
+    a:focus, button:focus, input:focus, textarea:focus {outline:3px solid rgba(199,123,99,0.18);outline-offset:3px}
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="#main">Tonaquelove</a>
+
+      <nav class="main-nav" aria-label="Primary">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#coaching">Coaching</a></li>
+          <li><a href="#journal">Journal</a></li>
+          <li><a href="#quotes">Quotes</a></li>
+          <li><a href="#gallery">Photos</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <button class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Open menu">☰</button>
+    </div>
+
+    <nav id="mobile-menu" class="mobile-menu" hidden>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#coaching">Coaching</a></li>
+        <li><a href="#journal">Journal</a></li>
+        <li><a href="#quotes">Quotes</a></li>
+        <li><a href="#gallery">Photos</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-inner">
+        <h1>Tonaquelove — Honest love. Stronger together.</h1>
+        <p class="lead">Real tools, real growth. Practical couples coaching, a guided healing journal, and short daily practices to keep love thriving through good times and storms.</p>
+        <div class="hero-ctas">
+          <a class="btn primary" href="#contact">Book a Free Discovery Call</a>
+          <a class="btn" href="#journal">Explore the Healing Journal</a>
+        </div>
+        <p class="small-note">We are coaches, not therapists. See the coaching disclaimer on the Coaching section.</p>
+      </div>
+    </section>
+
+    <section id="about" class="container section about">
+      <div class="grid-2">
+        <div>
+          <h2>We stayed. We learned. We share the tools.</h2>
+          <p>Tonaquelove was created by Tony and Aqueline — partners who chose radical honesty, steady commitment, and practical repair. We are a Black couple proud of our openness; we share what worked for us so couples of all backgrounds can build stronger bonds. This site is for everyone, everywhere.</p>
+          <ul class="values">
+            <li><strong>Honesty with kindness</strong></li>
+            <li><strong>Commit to repair</strong></li>
+            <li><strong>Curiosity over blame</strong></li>
+            <li><strong>Accessible for all couples</strong></li>
+          </ul>
+        </div>
+        <div class="about-photo">
+          <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1200&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Couple holding hands - placeholder" />
+          <figcaption>Tony & Aqueline — learning to stay and grow together. (Replace with your photo.)</figcaption>
+        </div>
+      </div>
+    </section>
+
+    <section id="coaching" class="container section coaching">
+      <h2>Couples Coaching</h2>
+      <p>Our coaching focuses on skills and practices you can use day-to-day: clearer communication, repair after conflict, and reconnection. We are coaches, not therapists. If you’re experiencing severe trauma or clinical mental health needs, we’ll help you find a licensed therapist.</p>
+
+      <div class="packages grid-3" aria-hidden="false">
+        <article class="card">
+          <h3>Discovery Call</h3>
+          <p>Free 20-minute conversation to see fit and next steps.</p>
+          <p class="price">Free</p>
+        </article>
+
+        <article class="card">
+          <h3>Starter — 4 Sessions</h3>
+          <p>Assessment, communication basics, daily practice plan, and 4-week check-in.</p>
+          <p class="price">$399</p>
+        </article>
+
+        <article class="card">
+          <h3>Deep Work — 8 Sessions</h3>
+          <p>In-depth conflict recovery, intimacy rebuilding, weekly practice plans, and personalized journal prompts.</p>
+          <p class="price">$749</p>
+        </article>
+      </div>
+
+      <div class="disclaimer" role="note" aria-live="polite">
+        <strong>Disclaimer:</strong> Our work is coaching, not clinical therapy. We do not diagnose or treat mental health conditions. If you need therapeutic care, we will provide referrals to licensed professionals.
+      </div>
+    </section>
+
+    <section id="journal" class="container section journal">
+      <h2>Healing Journal & 7‑Day Affirmations</h2>
+      <p>A guided journal helps you reflect, track growth, and practice repair. Combine it with our 7-day affirmation plan to create momentum in your relationship.</p>
+
+      <div class="grid-2">
+        <div>
+          <h3>Sample Daily Template</h3>
+          <ol>
+            <li><strong>Morning:</strong> One-sentence intention for the relationship today.</li>
+            <li><strong>Midday (2 min):</strong> What went well? What needs attention?</li>
+            <li><strong>Evening (5–10 min):</strong> One appreciation, one learning, one action for tomorrow.</li>
+            <li><strong>Conflict Log:</strong> What happened, how I felt, what I need, repair steps.</li>
+          </ol>
+          <p><em>Want a printable PDF of the full healing journal?</em> Use the Contact form to request the sample and we'll send it.</p>
+        </div>
+        <div>
+          <h3>7‑Day Affirmations</h3>
+          <ul class="affirm-list">
+            <li><strong>Day 1 — Rooting:</strong> "We choose presence. I will listen with care and return to connection."</li>
+            <li><strong>Day 2 — Honesty:</strong> "I speak my truth with kindness. My partner’s truth matters."</li>
+            <li><strong>Day 3 — Repair:</strong> "It’s safe to pause, to say sorry, and to rebuild."</li>
+            <li><strong>Day 4 — Gratitude:</strong> "We notice the small things that lift us."</li>
+            <li><strong>Day 5 — Courage:</strong> "I face hard conversations because connection matters."</li>
+            <li><strong>Day 6 — Play:</strong> "Joy is part of our healing. We make space to laugh."</li>
+            <li><strong>Day 7 — Commitment:</strong> "We choose each other, again and again."</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="quotes" class="container section quotes">
+      <h2>Quotes & Inspiration</h2>
+      <div class="quote-grid" aria-live="polite">
+        <blockquote class="quote-card">“Staying is a brave act; staying with the work is love in action.”</blockquote>
+        <blockquote class="quote-card">“Honesty opens the door; kindness keeps it warm.”</blockquote>
+        <blockquote class="quote-card">“We don’t need perfect — we need persistent.”</blockquote>
+        <blockquote class="quote-card">“Repairs are the stitches that make love stronger.”</blockquote>
+      </div>
+      <p class="small-note">Share these as cards on social or save them as daily reminders.</p>
+    </section>
+
+    <section id="photos" class="container section photos-preview">
+      <h2>Photos & Stories</h2>
+      <p>Moments from our life, workshops, and everyday practice. Click any image in the gallery below to open a larger view and read the caption.</p>
+      <div class="preview-grid" aria-hidden="false">
+        <a class="preview-item" href="#gallery">
+          <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Our Story preview">
+          <span>Our Story</span>
+        </a>
+        <a class="preview-item" href="#gallery">
+          <img src="https://images.unsplash.com/photo-1524504397566-0f1e6a3166ae?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Everyday moments preview">
+          <span>Everyday</span>
+        </a>
+        <a class="preview-item" href="#gallery">
+          <img src="https://images.unsplash.com/photo-1520975923449-1ecb556ffef4?q=80&w=800&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Workshops preview">
+          <span>Workshops</span>
+        </a>
+      </div>
+      <p><a class="btn" href="#gallery">Open Full Gallery</a></p>
+    </section>
+
+    <section id="gallery" class="container section gallery" aria-label="Photo gallery">
+      <h2>Full Gallery</h2>
+      <p>Filter the gallery to view categories. Replace the placeholder images with your high-resolution photos (1200–2000px wide recommended).</p>
+
+      <div class="filters" role="toolbar" aria-label="Filter gallery">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="our-story">Our Story</button>
+        <button class="filter-btn" data-filter="workshops">Workshops</button>
+        <button class="filter-btn" data-filter="everyday">Everyday</button>
+      </div>
+
+      <div class="masonry-grid" id="masonry" style="margin-top:1rem">
+        <!-- Replace these Unsplash placeholders with your own images and captions -->
+        <figure class="masonry-item" data-category="our-story">
+          <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Couple walking together - placeholder" tabindex="0">
+          <figcaption><strong>Our Story</strong> — Returning home after a long day; small ritual of reconnecting.</figcaption>
+        </figure>
+
+        <figure class="masonry-item" data-category="everyday">
+          <img src="https://images.unsplash.com/photo-1524504397566-0f1e6a3166ae?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Hands holding - placeholder" tabindex="0">
+          <figcaption><strong>Everyday</strong> — A morning check-in moment.</figcaption>
+        </figure>
+
+        <figure class="masonry-item" data-category="workshops">
+          <img src="https://images.unsplash.com/photo-1520975923449-1ecb556ffef4?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Workshop circle - placeholder" tabindex="0">
+          <figcaption><strong>Workshops</strong> — Facilitating a communication practice.</figcaption>
+        </figure>
+
+        <figure class="masonry-item" data-category="our-story">
+          <img src="https://images.unsplash.com/photo-1514996937319-344454492b37?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Couple laughing - placeholder" tabindex="0">
+          <figcaption><strong>Our Story</strong> — Remembering why we chose each other.</figcaption>
+        </figure>
+
+        <figure class="masonry-item" data-category="everyday">
+          <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Home moment - placeholder" tabindex="0">
+          <figcaption><strong>Everyday</strong> — Tea and talk, small rituals.</figcaption>
+        </figure>
+
+        <figure class="masonry-item" data-category="workshops">
+          <img src="https://images.unsplash.com/photo-1534126511673-b6899657816a?q=80&w=1400&auto=format&fit=crop&ixlib=rb-4.0.3&s=placeholder" alt="Notes and hands - placeholder" tabindex="0">
+          <figcaption><strong>Workshops</strong> — Journaling prompt in a group setting.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- Lightbox modal -->
+    <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-label="Image viewer">
+      <button class="lb-close" aria-label="Close viewer">&times;</button>
+      <button class="lb-prev" aria-label="Previous image">&#8249;</button>
+      <div class="lb-content" tabindex="0">
+        <img id="lb-image" src="" alt="">
+        <p id="lb-caption" style="color:#fff;text-align:center;margin-top:.6rem"></p>
+      </div>
+      <button class="lb-next" aria-label="Next image">&#8250;</button>
+    </div>
+
+    <section id="contact" class="container section contact">
+      <h2>Contact & Booking</h2>
+      <p>Ready to connect? Book a free 20-minute discovery call or send us a note. We reply personally.</p>
+
+      <!-- Calendly embed: replace the URL below with your actual Calendly event URL -->
+      <div style="margin:1rem 0;">
+        <!-- Calendly inline widget container -->
+        <div id="calendly-inline" style="min-width:320px;height:600px;"></div>
+        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+        <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        <script>
+          // Replace this URL with your Calendly event page (example: 'https://calendly.com/yourname/discovery')
+          window.addEventListener('load', function(){
+            if (window.Calendly && document.getElementById('calendly-inline')) {
+              Calendly.initInlineWidget({
+                url: 'https://calendly.com/tonaquelove/discovery', // ← REPLACE with your Calendly event URL
+                parentElement: document.getElementById('calendly-inline'),
+                prefill: {},
+                utm: {}
+              });
+            }
+          });
+        </script>
+      </div>
+
+      <form class="contact-form" action="#" method="post" aria-label="Contact form" style="margin-top:1rem">
+        <label>
+          Your names (both partners)
+          <input type="text" name="names" required>
+        </label>
+
+        <label>
+          Email
+          <input type="email" name="email" required>
+        </label>
+
+        <label>
+          Brief description (what you're seeking)
+          <textarea name="message" rows="4" maxlength="400"></textarea>
+        </label>
+
+        <label class="checkbox">
+          <input type="checkbox" name="consent" required>
+          I understand coaching is not therapy and I agree to the terms.
+        </label>
+
+        <button type="submit" class="btn primary">Request a Call</button>
+      </form>
+
+      <div class="socials" style="margin-top:1rem">
+        <p>Follow us for daily affirmations and short coaching clips:</p>
+        <ul class="social-list" style="display:flex;gap:.5rem;padding:0;list-style:none">
+          <li><a href="https://www.tiktok.com/@tonaquelove" target="_blank" rel="noopener">TikTok</a></li>
+          <li><a href="#" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="#" target="_blank" rel="noopener">YouTube</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>Tonaquelove</strong>
+        <p>Honest love. Stronger together.</p>
+      </div>
+      <nav aria-label="Footer">
+        <ul style="display:flex;gap:.5rem;list-style:none;padding:0;margin:0">
+          <li><a href="#coaching">Coaching</a></li>
+          <li><a href="#journal">Journal</a></li>
+          <li><a href="#gallery">Photos</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="legal">
+        <p>&copy; <span id="year"></span> Tonaquelove</p>
+        <p style="font-size:.85rem;color:var(--muted)"><a href="#" style="color:var(--muted);text-decoration:underline">Privacy</a> · <a href="#" style="color:var(--muted);text-decoration:underline">Terms</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Inlined JS: mobile menu + gallery filters + lightbox + simple form fallback
+    (function(){
+      document.getElementById('year').textContent = new Date().getFullYear();
+
+      // Mobile menu toggle
+      const menuToggle = document.querySelectorAll('.menu-toggle');
+      menuToggle.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const mobile = document.getElementById('mobile-menu');
+          const expanded = btn.getAttribute('aria-expanded') === 'true';
+          btn.setAttribute('aria-expanded', String(!expanded));
+          if (mobile) {
+            if (mobile.hasAttribute('hidden')) {
+              mobile.removeAttribute('hidden');
+            } else {
+              mobile.setAttribute('hidden', '');
+            }
+          }
+        });
+      });
+
+      // Gallery filtering
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const items = document.querySelectorAll('.masonry-item');
+
+      if (filterButtons.length && items.length) {
+        filterButtons.forEach(btn => {
+          btn.addEventListener('click', () => {
+            filterButtons.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            const filter = btn.getAttribute('data-filter');
+            items.forEach(item => {
+              if (filter === 'all' || item.dataset.category === filter) {
+                item.style.display = '';
+              } else {
+                item.style.display = 'none';
+              }
+            });
+          });
+        });
+      }
+
+      // Lightbox
+      const lightbox = document.getElementById('lightbox');
+      const lbImage = document.getElementById('lb-image');
+      const lbCaption = document.getElementById('lb-caption');
+      const lbClose = document.querySelector('.lb-close');
+      const lbPrev = document.querySelector('.lb-prev');
+      const lbNext = document.querySelector('.lb-next');
+
+      let gallery = [];
+      let currentIndex = -1;
+
+      function openLightbox(index) {
+        if (index < 0 || index >= gallery.length) return;
+        currentIndex = index;
+        const item = gallery[index];
+        lbImage.src = item.img;
+        lbImage.alt = item.alt || '';
+        lbCaption.textContent = item.caption || '';
+        lightbox.setAttribute('aria-hidden', 'false');
+        lightbox.style.display = 'flex';
+        setTimeout(() => lightbox.focus(), 50);
+      }
+
+      function closeLightbox() {
+        lightbox.setAttribute('aria-hidden', 'true');
+        lightbox.style.display = 'none';
+        currentIndex = -1;
+      }
+
+      function showNext() {
+        if (gallery.length === 0) return;
+        const next = (currentIndex + 1) % gallery.length;
+        openLightbox(next);
+      }
+      function showPrev() {
+        if (gallery.length === 0) return;
+        const prev = (currentIndex - 1 + gallery.length) % gallery.length;
+        openLightbox(prev);
+      }
+
+      const masonryItems = document.querySelectorAll('.masonry-item img');
+      if (masonryItems.length) {
+        masonryItems.forEach((img, i) => {
+          gallery.push({
+            img: img.src,
+            alt: img.alt,
+            caption: img.closest('figure')?.querySelector('figcaption')?.textContent || ''
+          });
+
+          img.addEventListener('click', () => openLightbox(i));
+          img.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              openLightbox(i);
+            }
+          });
+        });
+      }
+
+      if (lbClose) lbClose.addEventListener('click', closeLightbox);
+      if (lbNext) lbNext.addEventListener('click', showNext);
+      if (lbPrev) lbPrev.addEventListener('click', showPrev);
+
+      // Close on overlay click
+      if (lightbox) {
+        lightbox.addEventListener('click', (e) => {
+          if (e.target === lightbox) closeLightbox();
+        });
+      }
+
+      // Keyboard navigation for lightbox
+      document.addEventListener('keydown', (e) => {
+        if (!lightbox || lightbox.getAttribute('aria-hidden') === 'true') return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowRight') showNext();
+        if (e.key === 'ArrowLeft') showPrev();
+      });
+
+      // Simple form fallback: prevent submit and show confirmation (replace with real backend integration)
+      const form = document.querySelector('.contact-form');
+      if (form) {
+        form.addEventListener('submit', function(e){
+          e.preventDefault();
+          // Ideally send to server / email / Calendly. For now show a simple alert.
+          alert('Thanks — your request has been received. We will reply shortly.');
+          form.reset();
+        });
+      }
+    })();
+  </script>
+</body>
+  </html>
