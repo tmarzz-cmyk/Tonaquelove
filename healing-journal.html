@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Tonaquelove — Healing Journal (Print-ready)</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    /* Print-friendly layout */
+    @page { margin: 20mm; }
+    :root{
+      --accent:#C77B63;
+      --muted:#666;
+      --text:#222;
+      --paper:#fff;
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    body{margin:0;background:#f6f3f1;color:var(--text);padding:18px}
+    .sheet{width:210mm;max-width:100%;margin:12px auto;background:var(--paper);padding:20mm;border-radius:6px;box-shadow:0 6px 18px rgba(0,0,0,.05)}
+    header{border-bottom:4px solid var(--accent);padding-bottom:8px;margin-bottom:14px}
+    h1{font-size:28px;margin:0 0 6px}
+    h2{font-size:18px;margin:8px 0;color:var(--accent)}
+    p.lead{color:var(--muted);margin-top:0}
+    .two-col{display:flex;gap:18px}
+    .col{flex:1}
+    .section{margin:14px 0}
+    label{display:block;font-weight:600;margin-bottom:6px}
+    .input, textarea{width:100%;border:1px dashed rgba(0,0,0,.12);padding:10px;border-radius:6px;background:transparent;min-height:46px}
+    textarea{min-height:85px;resize:none}
+    .small{font-size:13px;color:var(--muted)}
+    .quote{font-style:italic;color:var(--accent);font-weight:600;padding:12px;border-left:4px solid var(--accent);margin:12px 0;background:#fff9f7;border-radius:6px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+    footer{margin-top:18px;font-size:12px;color:var(--muted);text-align:center}
+    /* Page break helpers for print */
+    .page-break{page-break-after:always}
+    /* Mobile adjustments */
+    @media (max-width:720px){
+      .two-col{flex-direction:column}
+      .grid-3{grid-template-columns:repeat(1,1fr)}
+      .sheet{padding:14px}
+    }
+  </style>
+</head>
+<body>
+  <!-- Cover -->
+  <section class="sheet" id="cover">
+    <header>
+      <h1>Tonaquelove — Healing Journal</h1>
+      <p class="lead">Guided prompts, short practices, and weekly reflections to strengthen your relationship. Coaching tools — not therapy.</p>
+    </header>
+
+    <div class="section">
+      <h2>How to use this journal</h2>
+      <p class="small">This journal is designed for couples who want practical, daily habits to connect and repair. Use it together or individually, then share your reflections. Each day takes 5–15 minutes. If you or your partner need clinical mental health support, please consult a licensed therapist.</p>
+    </div>
+
+    <div class="section grid-3">
+      <div>
+        <h3>Daily Time</h3>
+        <p class="small">5–15 minutes</p>
+      </div>
+      <div>
+        <h3>Tools Included</h3>
+        <p class="small">Morning intention, midday check-in, evening reflection, conflict log, gratitude, weekly prompts.</p>
+      </div>
+      <div>
+        <h3>Suggestion</h3>
+        <p class="small">Pick a consistent time (morning or evening). Keep your entries brief and honest. Use the affirmations daily for seven days, then repeat or customize.</p>
+      </div>
+    </div>
+    <footer>Created by Tony & Aqueline — Tonaquelove</footer>
+  </section>
+
+  <!-- Daily template (repeatable) -->
+  <section class="sheet page-break" id="daily-template">
+    <h2>Daily Template</h2>
+    <p class="small">Use this page each day. Write short, honest entries — clarity matters more than length.</p>
+
+    <div class="section">
+      <label>DATE</label>
+      <div class="input" contenteditable="true" aria-label="Date">__________</div>
+    </div>
+
+    <div class="two-col section">
+      <div class="col">
+        <label>MORNING — Intention (1 sentence)</label>
+        <div class="input" contenteditable="true">Today, I will... </div>
+
+        <label style="margin-top:12px">MIDDAY (2 min) — Quick check</label>
+        <div class="input" contenteditable="true">What went well? What needs a small check-in?</div>
+      </div>
+
+      <div class="col">
+        <label>EVENING — Reflection (5–10 min)</label>
+        <div class="input" contenteditable="true">
+          - One appreciation for my partner:
+          <br><br>- One thing I learned today:
+          <br><br>- One small action for tomorrow:
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h3>Conflict Log (if needed)</h3>
+      <div class="small">Use this when something hurts. Keep to the facts, your feelings, and a clear repair request.</div>
+      <label>What happened?</label>
+      <div class="input" contenteditable="true">Describe event — keep to facts</div>
+
+      <label>How I felt</label>
+      <div class="input" contenteditable="true">I felt...</div>
+
+      <label>What I need / request</label>
+      <div class="input" contenteditable="true">I need...</div>
+
+      <label>Repair steps we can try</label>
+      <div class="input" contenteditable="true">1) ... 2) ...</div>
+    </div>
+
+    <footer class="small">Tip: If a conflict is intense, pause and use "pause & return" — agree a short break, then reconvene with this conflict log as a guide.</footer>
+  </section>
+
+  <!-- Weekly prompts -->
+  <section class="sheet page-break" id="weekly-prompts">
+    <h2>Weekly Prompts (4-week starter)</h2>
+    <p class="small">Work one week at a time. Discuss the answers together at the end of the week.</p>
+
+    <div class="section">
+      <h3>Week 1 — Values & Vision</h3>
+      <label>What three values do we want our relationship to stand for?</label>
+      <div class="input" contenteditable="true">1) 2) 3)</div>
+
+      <label>How will we live these values in small actions?</label>
+      <div class="input" contenteditable="true"></div>
+    </div>
+
+    <div class="section">
+      <h3>Week 2 — Repair Practice</h3>
+      <label>How do we currently make repair? What works? What gets in the way?</label>
+      <div class="input" contenteditable="true"></div>
+
+      <label>Agree on a short step-by-step repair ritual (3–5 steps)</label>
+      <div class="input" contenteditable="true">Step 1: ... Step 2: ...</div>
+    </div>
+
+    <div class="section">
+      <h3>Week 3 — Emotional Safety</h3>
+      <label>What helps each of us feel safe? (3 specific things)</label>
+      <div class="input" contenteditable="true">Partner A: ... Partner B: ...</div>
+
+      <label>What small boundary or practice can we add this week to increase safety?</label>
+      <div class="input" contenteditable="true"></div>
+    </div>
+
+    <div class="section">
+      <h3>Week 4 — Intimacy & Pleasure</h3>
+      <label>What small actions make us feel closest? (list at least 5)</label>
+      <div class="input" contenteditable="true"></div>
+
+      <label>Plan three short shared activities (15–45 min) for this month</label>
+      <div class="input" contenteditable="true">1) 2) 3)</div>
+    </div>
+
+    <footer class="small">After four weeks, repeat, adjust prompts, or create new prompts that fit your relationship.</footer>
+  </section>
+
+  <!-- 7-day affirmations (printable cards) -->
+  <section class="sheet page-break" id="affirmations">
+    <h2>7‑Day Affirmations (Read together each morning)</h2>
+
+    <div class="section quote">
+      <strong>Day 1 — Rooting</strong><br>
+      "We choose presence. I will listen with care and return to connection."
+    </div>
+
+    <div class="section quote">
+      <strong>Day 2 — Honesty</strong><br>
+      "I speak my truth with kindness. My partner’s truth matters."
+    </div>
+
+    <div class="section quote">
+      <strong>Day 3 — Repair</strong><br>
+      "It’s safe to pause, to say sorry, and to rebuild."
+    </div>
+
+    <div class="section quote">
+      <strong>Day 4 — Gratitude</strong><br>
+      "We notice the small things that lift us."
+    </div>
+
+    <div class="section quote">
+      <strong>Day 5 — Courage</strong><br>
+      "I face hard conversations because connection matters."
+    </div>
+
+    <div class="section quote">
+      <strong>Day 6 — Play</strong><br>
+      "Joy is part of our healing. We make space to laugh."
+    </div>
+
+    <div class="section quote">
+      <strong>Day 7 — Commitment</strong><br>
+      "We choose each other, again and again."
+    </div>
+
+    <footer class="small">Tip: Read these aloud together, or write them on sticky notes around your home.</footer>
+  </section>
+
+  <!-- Notes and journaling space -->
+  <section class="sheet page-break" id="notes">
+    <h2>Free Notes / Reflection Pages</h2>
+    <p class="small">Use the pages below for free journaling, gratitude lists, or to paste photos and mementos.</p>
+
+    <!-- Provide several blank blocks for printing -->
+    <div style="margin-top:12px">
+      <label>Notes</label>
+      <textarea style="width:100%;min-height:420px;border:1px dashed rgba(0,0,0,.12);border-radius:6px"></textarea>
+    </div>
+  </section>
+
+  <section class="sheet" id="closing">
+    <h2>Closing</h2>
+    <p class="small">Thank you for using the Tonaquelove Healing Journal. Use these prompts consistently for best results. If you'd like the editable digital file or group workshop materials, contact Tony & Aqueline via the site.</p>
+    <footer>© Tonaquelove — Honest love. Stronger together.</footer>
+  </section>
+</body>
+  </html>
